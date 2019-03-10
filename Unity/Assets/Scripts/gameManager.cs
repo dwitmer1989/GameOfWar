@@ -7,15 +7,21 @@ using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
-    private Queue<Cards>[] players;
+    private Player[] players;
     public int playerCount; //value assigned by UI 'gameManager' object
+    public bool playContinuous; //value assigned by UI 'gameManager' object
     private Queue<Cards> jackPot;
     void Start() //called for each instance of the class (On UI scene with this class attached loaded)
     {
         jackPot = new Queue<Cards>(); //for war scenario
-        Queue<Cards> deck = Cards.InitializeStandardDeck();   
-        players = Cards.SplitDeck(playerCount, deck);
+        Queue<Cards> deck = Cards.InitializeStandardDeck();
+        players = new Player[playerCount];
+        int index = 0; 
+        foreach(Queue<Cards> playerDeck in Cards.SplitDeck(playerCount, deck)){
+            players[index++] = new Player(playerDeck); 
+        }
     }
+    
 
     public void PlayRound()
     {
@@ -25,7 +31,7 @@ public class gameManager : MonoBehaviour
         int index = 0; 
         
         //determine the highest power card and how many players have it
-        foreach (Queue<Cards> player in players)
+        foreach (Player player in players)
         {
             //if the player has the same card as the best card, increment the amount of round winners
             if (player.Peek().GetPower() == bestCardPower)
@@ -51,11 +57,11 @@ public class gameManager : MonoBehaviour
             */
             int warCount = 3;
 
-            foreach (Queue<Cards> player in players)
+            foreach (Player player in players)
             {
-                if (player.Count < warCount+1)
+                if (player.GetDeckCount() < warCount+1)
                 {
-                    warCount = player.Count - 1; 
+                    warCount = player.GetDeckCount() - 1; 
                 }     
             }
 
@@ -65,15 +71,15 @@ public class gameManager : MonoBehaviour
              * into the jackpot 
              * this functionality is added in the case that the game is extended to more than 2 players
             */
-            foreach (Queue<Cards> player in players)
+            foreach (Player player in players)
             {                
                 if (player.Peek().GetPower() == bestCardPower)
                 {
                     for(int i = 0; i < warCount; i++)
-                        jackPot.Enqueue(player.Dequeue());
+                        jackPot.Enqueue(player.DequeueDeck());
                 }
                 else // just add the top card to the jackpot
-                    jackPot.Enqueue(player.Dequeue());
+                    jackPot.Enqueue(player.DequeueDeck());
             }
         }
 
@@ -81,64 +87,28 @@ public class gameManager : MonoBehaviour
         {
             while (jackPot.Count > 0)
             {
-                players[winner].Enqueue(jackPot.Dequeue());
+                if(playContinuous)
+                    players[winner].EnqueueDeck(jackPot.Dequeue());
+                else
+                    players[winner].EnqueueWinnings(jackPot.Dequeue());
             }
 
-            foreach (Queue<Cards> player in players)
+            foreach (Player player in players)
             {    
-                string winnerObject = "Player" + (winner+1) + "Hand";
-                players[winner].Enqueue(player.Dequeue());
+                if(playContinuous)
+                    players[winner].EnqueueDeck(player.DequeueDeck());
+                else
+                    players[winner].EnqueueWinnings(player.DequeueDeck());
             }
         }
+        
         RefreshTable();
+        CheckEndOfGame();
     }
 
 
     public void RefreshTable()
-    {
-        /*
-         * check if any of the players has only one card left. If so, disappear the top card...
-         * (the card back that covers the player deck).
-         * If the amount of losers is one less than the total amount of players, end the game
-         * This functionality is necessary for the case that the game is extended to more than 2 players
-         */
-        
-        int losers = 0;
-        for (int i = 0; i < playerCount; i++)
-        {
-            /*
-             * determine if any card backs need to be disappeared - or reappeared.
-             * visibility is changed by placing the item's index in the UI array of objects...
-             * and thus in front or behind other objects
-             */
-            if(players[i].Count < 2)//disappear the back of the card
-                GameObject.Find("backOfCardP" + (i+1)).transform.SetSiblingIndex(0);
-            else//reappear the back of the card
-                GameObject.Find("backOfCardP" + (i+1)).transform.SetSiblingIndex(GameObject.Find("Canvas").transform.childCount);
-            
-            
-            if (players[i].Count < 1)
-            {
-                losers++;
-            }
-        }
-
-        //if playerCount = 1 greater than losers, the game is over
-        if (playerCount == losers + 1)
-        {
-            foreach (Queue<Cards> player in players)
-            {
-                if (player.Count > 0)
-                {
-                    //show the game ending prompt
-                    int lastIndex = GameObject.Find("Canvas").transform.childCount;
-                    GameObject.Find("Prompt").transform.SetSiblingIndex(lastIndex);
-                    break;
-                }
-                
-            }
-            
-        }
+    { 
 
         /*
          * send the UI elements to their parent GameObject's location in the UI
@@ -153,20 +123,32 @@ public class gameManager : MonoBehaviour
         //for each of the players, place the cards in their hand 
         for (int i = 0; i < playerCount; i++)
         {
-            if (players[i].Count > 0)
+            if (players[i].GetDeckCount() > 0)
             {
-                foreach (Cards card in players[i])
+                foreach (Cards card in players[i].getDeck())
                 {
                     //move to the location of the parent
                     GameObject.Find(card.GetPower() + card.GetSuit()).GetComponent<GlideController>().SetDestination(GameObject.Find("Player" + (i + 1) + "Hand").transform.position);
                 }
-
+                
                 //slide top card out of the pile  
                 GameObject.Find(players[i].Peek().GetPower() + players[i].Peek().GetSuit()).GetComponent<GlideController>().SetDestination(GameObject.Find("Player" + (i + 1) + "Card").transform.position);
 
                 //set the card count indicators on the player hands
-                GameObject.Find("Player" + (i + 1) + "CardCount").GetComponent<Text>().text =(players[i].Count-1).ToString();
+                GameObject.Find("Player" + (i + 1) + "CardCount").GetComponent<Text>().text =(players[i].GetDeckCount()-1).ToString();
+            }
 
+            if (!playContinuous)
+            {
+                foreach (Cards card in players[i].GetWinnings())
+                {
+                    GameObject.Find(card.GetPower() + card.GetSuit()).GetComponent<GlideController>().SetDestination(GameObject.Find("Player" + (i + 1) + "WinningsCount").transform.position);
+                }
+
+                //set the winnings count indicators below the winnings piles
+
+                if (players[i].GetWinningsCount() > 0)
+                    GameObject.Find("Player" + (i + 1) + "WinningsCount").GetComponentInChildren<Text>().text =players[i].GetWinningsCount().ToString();
             }
 
             //set the jackpot hand if there is one
@@ -190,9 +172,72 @@ public class gameManager : MonoBehaviour
                 cardGO.transform.SetSiblingIndex(index++);
             }
         }
-
     }
 
+    private void CheckEndOfGame()
+    {
+        /*
+         * check if any of the players has only one card left. If so, disappear the top card...
+         * (the card back that covers the player deck).
+         * If the amount of losers is one less than the total amount of players, end the game
+         * This functionality is necessary for the case that the game is extended to more than 2 players
+         */
+        
+        int losers = 0;
+        for (int i = 0; i < playerCount; i++)
+        {
+            /*
+             * determine if any card backs need to be disappeared - or reappeared.
+             * visibility is changed by placing the item's index in the UI array of objects...
+             * and thus in front or behind other objects
+             */
+            if(players[i].GetDeckCount() < 2)//disappear the back of the card
+                GameObject.Find("backOfCardP" + (i+1)).transform.SetSiblingIndex(0);
+            else//reappear the back of the card
+                GameObject.Find("backOfCardP" + (i+1)).transform.SetSiblingIndex(GameObject.Find("Canvas").transform.childCount);
+            
+            
+            if (players[i].GetDeckCount() < 1)
+            {
+                losers++;
+            }
+        }
+
+        //if playerCount = 1 greater than losers, the game is over (applies only if continuous play
+        if (playContinuous)
+        {
+            if (playerCount == losers + 1)
+            {
+                foreach (Player player in players)
+                {
+                    if (player.GetDeckCount() > 0)
+                    {
+                        //show the game ending prompt
+                        int lastIndex = GameObject.Find("Canvas").transform.childCount;
+                        GameObject.Find("EOGPrompt").transform.SetSiblingIndex(lastIndex);
+                        break;
+                    }
+                    
+                } 
+            }
+        }
+
+        else
+        {
+            foreach (Player player in players)
+            {
+                if (player.GetDeckCount() <= 0)
+                {
+                    //show the game ending prompt
+                    int lastIndex = GameObject.Find("Canvas").transform.childCount;
+                    GameObject.Find("EOGPrompt").transform.SetSiblingIndex(lastIndex);
+                    //break;
+                }
+            }
+        }
+
+    }
+    
     public void HideSetTableButton()
     {
         //moves the set table button out of view and brings the play round button into view
@@ -209,5 +254,10 @@ public class gameManager : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void LoadMain()
+    {
+        SceneManager.LoadScene("Main"); 
     }
 }

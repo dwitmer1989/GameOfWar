@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Cards.cs" />
     <Compile Include="Assets\Scripts\gameManager.cs" />
     <Compile Include="Assets\Scripts\GlideController.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/deronwitmer/Google Drive/Personal Programs/GameOfWar/GameOfWar Repo/Unity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
