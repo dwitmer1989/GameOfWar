@@ -5,8 +5,8 @@ namespace DefaultNamespace
 {
     public class Cards
     {
-        private string suit; 
-        private int power; //power: Ace = 13, King = 12, Queen = 11... 2 = 0
+        private string suit;  
+        private int power; // 2=2, 3=3...10=10, jack=11...ace=14
 
         public Cards(string suit, int power)
         {
@@ -15,32 +15,31 @@ namespace DefaultNamespace
         }
         
         //getters
-        public string getSuit()
+        public string GetSuit()
         {
             return suit; 
         }
 
-        public int getPower()
+        public int GetPower()
         {
             return power; 
         }
         
         //setters
-        public void setSuit(string suit)
+        public void SetSuit(string suit)
         {
             this.suit = suit; 
         }
 
-        public void setPower(int power)
+        public void SetPower(int power)
         {
             this.power = power; 
         }
         
         //auxilliary functions
-        public static Queue<Cards> initializeStandardDeck()
+        public static Queue<Cards> InitializeStandardDeck() //returns a queue that represents a standard deck of cards
         {
             Cards[] deck = new Cards[52];
-
             string suit=null;
             int deckIndex = 0; 
             for (int i = 0; i < 4; i++)
@@ -65,11 +64,11 @@ namespace DefaultNamespace
                     deck[deckIndex++] = new Cards(suit, j);
                 }
             }
-            shuffleDeck(deck);
+            ShuffleDeck(deck);
             return new Queue<Cards>(deck);
         }
 
-        public static Cards[] shuffleDeck(Cards[] deck)
+        public static Cards[] ShuffleDeck(Cards[] deck)
         // shuffle the deck using the popular Knuth shuffle algorithm
         // for each index in the array, swap the value with the value found at a random index in the array
         {
@@ -84,7 +83,7 @@ namespace DefaultNamespace
 
             return deck; 
         }
-        public static Queue<Cards>[] splitDeck(int playerCount, Queue<Cards> deck)
+        public static Queue<Cards>[] SplitDeck(int playerCount, Queue<Cards> deck)
         {
             Queue<Cards>[] players = new Queue<Cards>[playerCount];
         

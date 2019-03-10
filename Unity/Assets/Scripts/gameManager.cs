@@ -13,11 +13,11 @@ public class gameManager : MonoBehaviour
     void Start() //called for each instance of the class (On UI scene with this class attached loaded)
     {
         jackPot = new Queue<Cards>(); //for war scenario
-        Queue<Cards> deck = Cards.initializeStandardDeck();   
-        players = Cards.splitDeck(playerCount, deck);
+        Queue<Cards> deck = Cards.InitializeStandardDeck();   
+        players = Cards.SplitDeck(playerCount, deck);
     }
 
-    public void playRound()
+    public void PlayRound()
     {
         int bestCardPower = 0;
         int winnerCount = 0;
@@ -28,13 +28,13 @@ public class gameManager : MonoBehaviour
         foreach (Queue<Cards> player in players)
         {
             //if the player has the same card as the best card, increment the amount of round winners
-            if (player.Peek().getPower() == bestCardPower)
+            if (player.Peek().GetPower() == bestCardPower)
                 winnerCount++; 
             
             //if the player has a better card than the current best card, set the best card power and assign the count of winners to 1
-            if (player.Peek().getPower() > bestCardPower)
+            if (player.Peek().GetPower() > bestCardPower)
             {
-                bestCardPower = player.Peek().getPower();
+                bestCardPower = player.Peek().GetPower();
                 winnerCount = 1;
                 winner = index; 
             }
@@ -67,7 +67,7 @@ public class gameManager : MonoBehaviour
             */
             foreach (Queue<Cards> player in players)
             {                
-                if (player.Peek().getPower() == bestCardPower)
+                if (player.Peek().GetPower() == bestCardPower)
                 {
                     for(int i = 0; i < warCount; i++)
                         jackPot.Enqueue(player.Dequeue());
@@ -158,11 +158,11 @@ public class gameManager : MonoBehaviour
                 foreach (Cards card in players[i])
                 {
                     //move to the location of the parent
-                    GameObject.Find(card.getPower() + card.getSuit()).GetComponent<GlideController>().SetDestination(GameObject.Find("Player" + (i + 1) + "Hand").transform.position);
+                    GameObject.Find(card.GetPower() + card.GetSuit()).GetComponent<GlideController>().SetDestination(GameObject.Find("Player" + (i + 1) + "Hand").transform.position);
                 }
 
                 //slide top card out of the pile  
-                GameObject.Find(players[i].Peek().getPower() + players[i].Peek().getSuit()).GetComponent<GlideController>().SetDestination(GameObject.Find("Player" + (i + 1) + "Card").transform.position);
+                GameObject.Find(players[i].Peek().GetPower() + players[i].Peek().GetSuit()).GetComponent<GlideController>().SetDestination(GameObject.Find("Player" + (i + 1) + "Card").transform.position);
 
                 //set the card count indicators on the player hands
                 GameObject.Find("Player" + (i + 1) + "CardCount").GetComponent<Text>().text =(players[i].Count-1).ToString();
@@ -175,7 +175,7 @@ public class gameManager : MonoBehaviour
             foreach (Cards card in jackPot)
             {
                 //find the game object that represents the current card in the UI
-                GameObject cardGO = GameObject.Find(card.getPower()+card.getSuit());
+                GameObject cardGO = GameObject.Find(card.GetPower()+card.GetSuit());
                 
                 //find the position of the jackpot game object
                 Vector2 jackpotPosition = GameObject.Find("Jackpot").transform.position;
@@ -193,20 +193,20 @@ public class gameManager : MonoBehaviour
 
     }
 
-    public void hideSetTableButton()
+    public void HideSetTableButton()
     {
         //moves the set table button out of view and brings the play round button into view
         GameObject.Find("SetTableButton").GetComponent<GlideController>().SetDestination(GameObject.Find("OffScreenBottom").transform.position);
         GameObject.Find("PlayRoundButton").GetComponent<GlideController>().SetDestination(GameObject.Find("OnScreenButton").transform.position);
     }
 
-    public void playAgain()
+    public void PlayAgain()
     {
         //reload the scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     }
 
-    public void exitGame()
+    public void ExitGame()
     {
         Application.Quit();
     }
