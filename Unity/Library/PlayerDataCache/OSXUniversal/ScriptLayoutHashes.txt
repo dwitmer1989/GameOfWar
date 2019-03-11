@@ -2,7 +2,8 @@ OSXUniversal
 PlayerPath?
 /Users/deronwitmer/Google Drive/Personal Programs/GameOfWar/GameOfWar Repo/Unity/GameOfWar_Mac.app
 SceneListBegin?
-Assets/Scenes/2Player.unity
+Assets/Scenes/Main.unity
+Assets/Scenes/Game.unity
 SceneListEnd?
 4cdd7f10fdb6ae8ba40307f2a2ed4235 Assembly-CSharp.dll:.gameManager
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret

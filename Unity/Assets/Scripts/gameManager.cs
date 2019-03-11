@@ -9,7 +9,7 @@ public class gameManager : MonoBehaviour
 {
     private Player[] players;
     public int playerCount; //value assigned by UI 'gameManager' object
-    public bool playContinuous; //value assigned by UI 'gameManager' object
+    public static bool playContinuous; //value assigned by UI 'gameManager' object
     private Queue<Cards> jackPot;
     void Start() //called for each instance of the class (On UI scene with this class attached loaded)
     {
@@ -222,17 +222,36 @@ public class gameManager : MonoBehaviour
             }
         }
 
-        else
+        else // non-continuous play
         {
-            foreach (Player player in players)
-            {
-                if (player.GetDeckCount() <= 0)
+            //if there is a war scenario on the last card in continuous play, we have to quit without using those cards
+            bool war = false;
+            if (players[0].GetDeckCount() == 1)
+            { 
+                HashSet<int>hs = new HashSet<int>();
+                foreach (Player player in players)
                 {
-                    //show the game ending prompt
-                    int lastIndex = GameObject.Find("Canvas").transform.childCount;
-                    GameObject.Find("EOGPrompt").transform.SetSiblingIndex(lastIndex);
-                    //break;
+                    if (hs.Contains(player.Peek().GetPower()))
+                        war = true;
+                    else
+                        hs.Add(player.Peek().GetPower()); 
                 }
+               
+            }
+            
+            //the deck count for all players is the same... therefore just test the first one for end of Queue
+            if (players[0].GetDeckCount() <= 0 || war)
+            {
+                //show the game ending prompt
+                int lastIndex = GameObject.Find("Canvas").transform.childCount;
+                GameObject.Find("EOGPrompt").transform.SetSiblingIndex(lastIndex);
+
+                string promptText="";
+                for (int i = 0; i < playerCount; i++)
+                {
+                    promptText += "Player " + (i + 1) + ": " + players[i].GetWinningsCount() + '\n'; 
+                }
+                GameObject.Find("winnerText").GetComponent<Text>().text = promptText; 
             }
         }
 
@@ -259,5 +278,15 @@ public class gameManager : MonoBehaviour
     public void LoadMain()
     {
         SceneManager.LoadScene("Main"); 
+    }
+
+    public void loadGame()
+    {
+        SceneManager.LoadScene("Game"); 
+    }
+
+    public void setContinuousPlay(bool cPlay)
+    {
+        playContinuous = cPlay; 
     }
 }
