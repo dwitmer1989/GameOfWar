@@ -14,11 +14,11 @@ public class gameManager : MonoBehaviour
     void Start() //called for each instance of the class (On UI scene with this class attached loaded)
     {
         jackPot = new Queue<Cards>(); //for war scenario
-        Queue<Cards> deck = Cards.InitializeStandardDeck();
+        Queue<Cards> deck = Cards.InitializeStandardDeck();        
         players = new Player[playerCount];
         int index = 0; 
         foreach(Queue<Cards> playerDeck in Cards.SplitDeck(playerCount, deck)){
-            players[index++] = new Player(playerDeck); 
+            players[index] = new Player(playerDeck, (index++)+1); 
         }
     }
     
@@ -27,26 +27,23 @@ public class gameManager : MonoBehaviour
     {
         int bestCardPower = 0;
         int winnerCount = 0;
-        int winner = 0;
+        int winner=0;
+
+        //determine what the best card is and how many players have it
         int index = 0; 
-        
-        //determine the highest power card and how many players have it
         foreach (Player player in players)
         {
-            //if the player has the same card as the best card, increment the amount of round winners
             if (player.Peek().GetPower() == bestCardPower)
-                winnerCount++; 
-            
-            //if the player has a better card than the current best card, set the best card power and assign the count of winners to 1
+                winnerCount++;
             if (player.Peek().GetPower() > bestCardPower)
             {
-                bestCardPower = player.Peek().GetPower();
                 winnerCount = 1;
-                winner = index; 
-            }
-            index++; 
+                bestCardPower = player.Peek().GetPower();
+                winner = index++; 
+            } 
         }
-
+        
+        
         if (winnerCount > 1) //enter war scenario
         {
             /*
@@ -67,9 +64,9 @@ public class gameManager : MonoBehaviour
 
             /*
              * Determine who enters the war scenario and who just adds their losing card into the jackpot
-             * if the player's top card = bestCardPower, dequeue the top card and <warCount> amount of cards
+             * if the player's top card == bestCardPower, dequeue the top card and <warCount> amount of cards
              * into the jackpot 
-             * this functionality is added in the case that the game is extended to more than 2 players
+             * this functionality is added in the case that the game should be extended to support more than 2 players
             */
             foreach (Player player in players)
             {                
@@ -85,6 +82,8 @@ public class gameManager : MonoBehaviour
 
         else //there was only one winner, that player gets the cards - and the jackpot if there is one
         {
+
+            //depending on if the card should go into the player deck (player.EnqueueDeck), or into a separate pile (player.EnqueueWinnings)
             while (jackPot.Count > 0)
             {
                 if(playContinuous)
@@ -125,11 +124,8 @@ public class gameManager : MonoBehaviour
         {
             if (players[i].GetDeckCount() > 0)
             {
-                foreach (Cards card in players[i].getDeck())
-                {
-                    //move to the location of the parent
+                foreach (Cards card in players[i].getDeck())//move to the location of the parent
                     GameObject.Find(card.GetPower() + card.GetSuit()).GetComponent<GlideController>().SetDestination(GameObject.Find("Player" + (i + 1) + "Hand").transform.position);
-                }
                 
                 //slide top card out of the pile  
                 GameObject.Find(players[i].Peek().GetPower() + players[i].Peek().GetSuit()).GetComponent<GlideController>().SetDestination(GameObject.Find("Player" + (i + 1) + "Card").transform.position);
@@ -141,12 +137,10 @@ public class gameManager : MonoBehaviour
             if (!playContinuous)
             {
                 foreach (Cards card in players[i].GetWinnings())
-                {
                     GameObject.Find(card.GetPower() + card.GetSuit()).GetComponent<GlideController>().SetDestination(GameObject.Find("Player" + (i + 1) + "WinningsCount").transform.position);
-                }
+
 
                 //set the winnings count indicators below the winnings piles
-
                 if (players[i].GetWinningsCount() > 0)
                     GameObject.Find("Player" + (i + 1) + "WinningsCount").GetComponentInChildren<Text>().text =players[i].GetWinningsCount().ToString();
             }
@@ -155,21 +149,18 @@ public class gameManager : MonoBehaviour
             int offset = 0; //so the cards in the jackpot are nicely staggered, this is iterated by 50
             int index = 0; 
             foreach (Cards card in jackPot)
-            {
-                //find the game object that represents the current card in the UI
-                GameObject cardGO = GameObject.Find(card.GetPower()+card.GetSuit());
-                
+            {   
                 //find the position of the jackpot game object
                 Vector2 jackpotPosition = GameObject.Find("Jackpot").transform.position;
                 
                 //set an offset for the cards so you can see them stacked
-                jackpotPosition.x += (offset += 50);
+                jackpotPosition.x += offset += 50;
                 
                 //move the cards to the location
-                cardGO.GetComponent<GlideController>().SetDestination(jackpotPosition);
+                GameObject.Find(card.GetPower()+card.GetSuit()).GetComponent<GlideController>().SetDestination(jackpotPosition);
                 
                 //maintain the index order so that they stack nicely in the jackpot game object
-                cardGO.transform.SetSiblingIndex(index++);
+                GameObject.Find(card.GetPower()+card.GetSuit()).transform.SetSiblingIndex(index++);
             }
         }
     }
@@ -206,7 +197,7 @@ public class gameManager : MonoBehaviour
         //if playerCount = 1 greater than losers, the game is over (applies only if continuous play
         if (playContinuous)
         {
-            if (playerCount == losers + 1)
+            if (playerCount == losers + 1) //there's a single winner
             {
                 foreach (Player player in players)
                 {
@@ -215,6 +206,7 @@ public class gameManager : MonoBehaviour
                         //show the game ending prompt
                         int lastIndex = GameObject.Find("Canvas").transform.childCount;
                         GameObject.Find("EOGPrompt").transform.SetSiblingIndex(lastIndex);
+                        GameObject.Find("winnerText").GetComponent<Text>().text ="player " + player.getPlayerNumber() + " has won!"; 
                         break;
                     }
                     
@@ -243,13 +235,12 @@ public class gameManager : MonoBehaviour
             if (players[0].GetDeckCount() <= 0 || war)
             {
                 //show the game ending prompt
-                int lastIndex = GameObject.Find("Canvas").transform.childCount;
-                GameObject.Find("EOGPrompt").transform.SetSiblingIndex(lastIndex);
+                GameObject.Find("EOGPrompt").transform.SetSiblingIndex(GameObject.Find("Canvas").transform.childCount);
 
-                string promptText="";
-                for (int i = 0; i < playerCount; i++)
+                string promptText = ""; 
+                foreach (Player player in players)
                 {
-                    promptText += "Player " + (i + 1) + ": " + players[i].GetWinningsCount() + '\n'; 
+                    promptText += "Player: " + player.getPlayerNumber() + ": " + player.GetWinningsCount() + " cards" + '\n'; 
                 }
                 GameObject.Find("winnerText").GetComponent<Text>().text = promptText; 
             }

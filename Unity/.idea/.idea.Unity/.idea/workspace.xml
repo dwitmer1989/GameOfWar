@@ -3,47 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="1febed60-6489-4d46-8dac-9b498f6700a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NonContinuous.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NonContinuous.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/gameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/gameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/Managed/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/Managed/Unity.Analytics.DataPrivacy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/Managed/Unity.Analytics.DataPrivacy.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/Managed/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/Managed/Unity.TextMeshPro.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/globalgamemanagers" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/globalgamemanagers.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/level0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/sharedassets0.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/sharedassets0.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/GameOfWar_Mac.app/Contents/Resources/Data/sharedassets0.assets.resS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CrashedAssetImports.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/EditorInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorInstance.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LastBuild.buildreport" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastBuild.buildreport" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Unity.Analytics.DataPrivacy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Unity.Analytics.DataPrivacy.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Unity.TextMeshPro.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/globalgamemanagers" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/globalgamemanagers.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/level0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/sharedassets0.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/sharedassets0.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/sharedassets0.assets.resS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/ScriptLayoutHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/ScriptLayoutHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/5f162c-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/5f162c-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/c4e7f6-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/c4e7f6-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/34/343646de2d6f244b5ad81a151f3be26c" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/34/343646de2d6f244b5ad81a151f3be26c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/34/343646de2d6f244b5ad81a151f3be26c.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/34/343646de2d6f244b5ad81a151f3be26c.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/14/143b3508319445c59e87d9343e67fa38" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/14/143b3508319445c59e87d9343e67fa38" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/7d/7df320301728945e0bb9cd581225e934" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/7d/7df320301728945e0bb9cd581225e934" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler1.log" afterDir="false" />
@@ -53,60 +23,6 @@
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler5.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler5.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler6.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler6.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler7.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler7.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-0378675a05c664208a1181d6d25b0c86" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-14e0836864d9a4b05859699d4988a8b0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-1666529c849514a14967788d9aa62661" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-1dc0bdd51aea94de08e0f711e9a8198c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-1e0898d24542e420ba9a3bc08ef9923d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-1e98bde36b87544bf8fd333b391b6bfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-22902467563c14c0194c41a05bc1f934" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-230c89f6bc8fc4312b136f841e8da96a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-23d30858ff9fa466f8c8071b3be560e7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-2fa44bc6e841a424fa28471eee7d31e9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-30e974cc7a8e94a02a13bac40afbe74c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-3b8e6db4d623f46c7a56a064dd04087a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-3ba66d1da01d847ae925bfd065623eed" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-3dba21fbb15c0477e997cc9f5efa4dac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-43e6dc3a97c5049a9915f85bbc788d03" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-48021bbb1232444bb9da3e7550d42bb7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-551a3921d46ef46008be83df093876ca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-5a38cc8905ffb4249a1714833453d7f7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-5ea82025af15e4e1f8210d3818684961" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-631d2bbc2661a42baada58751211eade" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-6d51192eb0d8447ff8a37cf4ae237e62" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-6df082df49fa243ac81469a7be3609a0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-7058263445e744f22a10d9707a33cd72" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-718a7a51d02cb419f9f8c5fcd217c3b0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-71a9363f7717e47a2ba2a737497f4c38" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-765685e0c4acb4a7c877d141f2767c6b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-77b910a8c69bc4b898584310541583b2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-79c0dd53dd0cd444eafaa972e735cf2f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-7bcab908b72f143719478e9df20d88c1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-80585c405608b4a8691990bda194000c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-84924bfe4b13743f6b46840619b66816" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-8c04955d900744441837fded11e10c1a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-8d3a1f962c47943118090e42ebfbbd97" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-94c591a7ddb2148cd9b1baf293770914" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-9bd6d2d91ee3d4357b656bda1d918d11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-a137b05e232714ecdac3e1368ee99e39" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-ac101092860cf4d749f2c86bd97a327e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-ae15e717c1cab4715ae913fc0cc66c78" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-b0f66a1dd2aed420da935aff7f4f689d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-b2292b6621fa142669e52f0ebc279d4f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-b3288dde2c2b9474086c5cf8a2cc719a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-b4193f8b8a28a4c6a801c589e52d9e6c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-b6540a41a5a8e42f9ac2afbfaaea8a88" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-b9954d7e152e542c3a2aa04f8be71151" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-c62ad724baf414f7e8f5e16a680f5724" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-c6b7d2edafaa547569847bced792cd5b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-cd2c72ca1e2bc42b8891709c3f0aad9d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-d1d0838dbf85c4457ac38e5fc4ac6351" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-db70f4f3eb8584feabc7cea188b5bb2e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-f8acec6ba7a2c4e6b964c8efcde4caff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-faeb1da6918654cbba5f26ffb0cb399f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-fb882fc5288084fe8b429049e10fff13" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -119,55 +35,53 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/gameManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="243" column="13" lean-forward="true" selection-start-line="242" selection-start-column="54" selection-end-line="243" selection-end-column="13" />
+            <state relative-caret-position="556">
+              <caret line="242" column="113" selection-start-line="242" selection-start-column="113" selection-end-line="242" selection-end-column="113" />
               <folding>
-                <marker date="1552263012483" expanded="false" signature="6:167" ph="..." />
-                <marker date="1552263012483" expanded="true" signature="209:11321" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="533:875" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="802:869" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="909:3974" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="1147:1740" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="1556:1708" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="1791:3241" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="1814:2159" ph="/* in war scenario, by default, we dequeue 3 cards and then play the fourth... ... */" />
-                <marker date="1552263012483" expanded="true" signature="2237:2421" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="2307:2402" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="2435:2804" ph="/* Determine who enters the war scenario and who just adds their losing card into the jackpot ... */" />
-                <marker date="1552263012483" expanded="true" signature="2851:3231" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="2944:3097" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="3345:3909" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="3393:3617" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="3665:3899" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="4007:7124" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="4024:4118" ph="/* send the UI elements to their parent GameObject's location in the UI ... */" />
-                <marker date="1552263012483" expanded="true" signature="4207:4393" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="4506:7118" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="4563:5405" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="4638:4914" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="5439:6047" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="5518:5746" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="6274:7108" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="7159:10424" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="7174:7539" ph="/* check if any of the players has only one card left. If so, disappear the top card... ... */" />
-                <marker date="1552263012483" expanded="true" signature="7618:8372" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="7641:7894" ph="/* determine if any card backs need to be disappeared - or reappeared. ... */" />
-                <marker date="1552263012483" expanded="true" signature="8308:8362" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="8501:9060" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="8554:9050" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="8619:9035" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="8688:8996" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="9097:10417" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="9305:9673" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="9424:9643" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="9852:10407" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="10168:10306" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="10466:10860" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="10889:10997" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="11025:11065" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="11093:11146" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="11174:11227" ph="{...}" />
-                <marker date="1552263012483" expanded="true" signature="11274:11319" ph="{...}" />
+                <marker date="1552270253869" expanded="false" signature="6:167" ph="..." />
+                <marker date="1552270253869" expanded="true" signature="209:11171" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="533:894" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="810:888" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="928:3887" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="1155:1478" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="1313:1467" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="1546:3012" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="1569:1914" ph="/* in war scenario, by default, we dequeue 3 cards and then play the fourth... ... */" />
+                <marker date="1552270253869" expanded="true" signature="1992:2176" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="2062:2157" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="2190:2575" ph="/* Determine who enters the war scenario and who just adds their losing card into the jackpot ... */" />
+                <marker date="1552270253869" expanded="true" signature="2622:3002" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="2715:2868" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="3116:3822" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="3306:3530" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="3578:3812" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="3920:6843" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="3937:4031" ph="/* send the UI elements to their parent GameObject's location in the UI ... */" />
+                <marker date="1552270253869" expanded="true" signature="4120:4306" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="4419:6837" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="4476:5261" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="5295:5867" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="6094:6827" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="6878:10274" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="6893:7258" ph="/* check if any of the players has only one card left. If so, disappear the top card... ... */" />
+                <marker date="1552270253869" expanded="true" signature="7337:8091" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="7360:7613" ph="/* determine if any card backs need to be disappeared - or reappeared. ... */" />
+                <marker date="1552270253869" expanded="true" signature="8027:8081" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="8220:8939" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="8299:8929" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="8364:8914" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="8433:8875" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="8976:10267" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="9184:9552" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="9303:9522" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="9731:10257" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="10004:10156" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="10316:10710" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="10739:10847" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="10875:10915" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="10943:10996" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="11024:11077" ph="{...}" />
+                <marker date="1552270253869" expanded="true" signature="11124:11169" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -176,20 +90,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+            <state relative-caret-position="1029">
+              <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
               <folding>
-                <marker date="1552251296969" expanded="true" signature="61:1037" ph="{...}" />
-                <marker date="1552251296969" expanded="true" signature="87:1035" ph="{...}" />
-                <marker date="1552251296969" expanded="true" signature="209:307" ph="{...}" />
-                <marker date="1552251296969" expanded="true" signature="335:388" ph="{...}" />
-                <marker date="1552251296969" expanded="true" signature="423:475" ph="{...}" />
-                <marker date="1552251296969" expanded="true" signature="514:570" ph="{...}" />
-                <marker date="1552251296969" expanded="true" signature="606:661" ph="{...}" />
-                <marker date="1552251296969" expanded="true" signature="703:752" ph="{...}" />
-                <marker date="1552251296969" expanded="true" signature="791:837" ph="{...}" />
-                <marker date="1552251296969" expanded="true" signature="883:936" ph="{...}" />
-                <marker date="1552251296969" expanded="true" signature="979:1029" ph="{...}" />
+                <marker date="1552267003252" expanded="true" signature="6:52" ph="..." />
+                <marker date="1552267003252" expanded="true" signature="80:1244" ph="{...}" />
+                <marker date="1552267003252" expanded="true" signature="106:1242" ph="{...}" />
+                <marker date="1552267003252" expanded="true" signature="281:421" ph="{...}" />
+                <marker date="1552267003252" expanded="true" signature="449:502" ph="{...}" />
+                <marker date="1552267003252" expanded="true" signature="537:589" ph="{...}" />
+                <marker date="1552267003252" expanded="true" signature="628:684" ph="{...}" />
+                <marker date="1552267003252" expanded="true" signature="720:775" ph="{...}" />
+                <marker date="1552267003252" expanded="true" signature="817:866" ph="{...}" />
+                <marker date="1552267003252" expanded="true" signature="905:951" ph="{...}" />
+                <marker date="1552267003252" expanded="true" signature="989:1043" ph="{...}" />
+                <marker date="1552267003252" expanded="true" signature="1089:1142" ph="{...}" />
+                <marker date="1552267003252" expanded="true" signature="1185:1235" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -304,12 +220,12 @@
       <updated>1552168960222</updated>
       <workItem from="1552168961911" duration="448000" />
       <workItem from="1552247033718" duration="3000" />
-      <workItem from="1552247178740" duration="10404000" />
+      <workItem from="1552247178740" duration="16270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10855000" />
+    <option name="totallyTimeSpent" value="16721000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -396,75 +312,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+        <state relative-caret-position="1029">
+          <caret line="49" column="33" selection-start-line="49" selection-start-column="33" selection-end-line="49" selection-end-column="33" />
           <folding>
-            <marker date="1552251296969" expanded="true" signature="61:1037" ph="{...}" />
-            <marker date="1552251296969" expanded="true" signature="87:1035" ph="{...}" />
-            <marker date="1552251296969" expanded="true" signature="209:307" ph="{...}" />
-            <marker date="1552251296969" expanded="true" signature="335:388" ph="{...}" />
-            <marker date="1552251296969" expanded="true" signature="423:475" ph="{...}" />
-            <marker date="1552251296969" expanded="true" signature="514:570" ph="{...}" />
-            <marker date="1552251296969" expanded="true" signature="606:661" ph="{...}" />
-            <marker date="1552251296969" expanded="true" signature="703:752" ph="{...}" />
-            <marker date="1552251296969" expanded="true" signature="791:837" ph="{...}" />
-            <marker date="1552251296969" expanded="true" signature="883:936" ph="{...}" />
-            <marker date="1552251296969" expanded="true" signature="979:1029" ph="{...}" />
+            <marker date="1552267003252" expanded="true" signature="6:52" ph="..." />
+            <marker date="1552267003252" expanded="true" signature="80:1244" ph="{...}" />
+            <marker date="1552267003252" expanded="true" signature="106:1242" ph="{...}" />
+            <marker date="1552267003252" expanded="true" signature="281:421" ph="{...}" />
+            <marker date="1552267003252" expanded="true" signature="449:502" ph="{...}" />
+            <marker date="1552267003252" expanded="true" signature="537:589" ph="{...}" />
+            <marker date="1552267003252" expanded="true" signature="628:684" ph="{...}" />
+            <marker date="1552267003252" expanded="true" signature="720:775" ph="{...}" />
+            <marker date="1552267003252" expanded="true" signature="817:866" ph="{...}" />
+            <marker date="1552267003252" expanded="true" signature="905:951" ph="{...}" />
+            <marker date="1552267003252" expanded="true" signature="989:1043" ph="{...}" />
+            <marker date="1552267003252" expanded="true" signature="1089:1142" ph="{...}" />
+            <marker date="1552267003252" expanded="true" signature="1185:1235" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/gameManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="243" column="13" lean-forward="true" selection-start-line="242" selection-start-column="54" selection-end-line="243" selection-end-column="13" />
+        <state relative-caret-position="556">
+          <caret line="242" column="113" selection-start-line="242" selection-start-column="113" selection-end-line="242" selection-end-column="113" />
           <folding>
-            <marker date="1552263012483" expanded="false" signature="6:167" ph="..." />
-            <marker date="1552263012483" expanded="true" signature="209:11321" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="533:875" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="802:869" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="909:3974" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="1147:1740" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="1556:1708" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="1791:3241" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="1814:2159" ph="/* in war scenario, by default, we dequeue 3 cards and then play the fourth... ... */" />
-            <marker date="1552263012483" expanded="true" signature="2237:2421" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="2307:2402" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="2435:2804" ph="/* Determine who enters the war scenario and who just adds their losing card into the jackpot ... */" />
-            <marker date="1552263012483" expanded="true" signature="2851:3231" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="2944:3097" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="3345:3909" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="3393:3617" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="3665:3899" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="4007:7124" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="4024:4118" ph="/* send the UI elements to their parent GameObject's location in the UI ... */" />
-            <marker date="1552263012483" expanded="true" signature="4207:4393" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="4506:7118" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="4563:5405" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="4638:4914" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="5439:6047" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="5518:5746" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="6274:7108" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="7159:10424" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="7174:7539" ph="/* check if any of the players has only one card left. If so, disappear the top card... ... */" />
-            <marker date="1552263012483" expanded="true" signature="7618:8372" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="7641:7894" ph="/* determine if any card backs need to be disappeared - or reappeared. ... */" />
-            <marker date="1552263012483" expanded="true" signature="8308:8362" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="8501:9060" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="8554:9050" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="8619:9035" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="8688:8996" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="9097:10417" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="9305:9673" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="9424:9643" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="9852:10407" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="10168:10306" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="10466:10860" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="10889:10997" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="11025:11065" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="11093:11146" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="11174:11227" ph="{...}" />
-            <marker date="1552263012483" expanded="true" signature="11274:11319" ph="{...}" />
+            <marker date="1552270253869" expanded="false" signature="6:167" ph="..." />
+            <marker date="1552270253869" expanded="true" signature="209:11171" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="533:894" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="810:888" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="928:3887" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="1155:1478" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="1313:1467" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="1546:3012" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="1569:1914" ph="/* in war scenario, by default, we dequeue 3 cards and then play the fourth... ... */" />
+            <marker date="1552270253869" expanded="true" signature="1992:2176" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="2062:2157" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="2190:2575" ph="/* Determine who enters the war scenario and who just adds their losing card into the jackpot ... */" />
+            <marker date="1552270253869" expanded="true" signature="2622:3002" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="2715:2868" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="3116:3822" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="3306:3530" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="3578:3812" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="3920:6843" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="3937:4031" ph="/* send the UI elements to their parent GameObject's location in the UI ... */" />
+            <marker date="1552270253869" expanded="true" signature="4120:4306" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="4419:6837" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="4476:5261" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="5295:5867" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="6094:6827" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="6878:10274" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="6893:7258" ph="/* check if any of the players has only one card left. If so, disappear the top card... ... */" />
+            <marker date="1552270253869" expanded="true" signature="7337:8091" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="7360:7613" ph="/* determine if any card backs need to be disappeared - or reappeared. ... */" />
+            <marker date="1552270253869" expanded="true" signature="8027:8081" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="8220:8939" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="8299:8929" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="8364:8914" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="8433:8875" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="8976:10267" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="9184:9552" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="9303:9522" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="9731:10257" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="10004:10156" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="10316:10710" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="10739:10847" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="10875:10915" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="10943:10996" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="11024:11077" ph="{...}" />
+            <marker date="1552270253869" expanded="true" signature="11124:11169" ph="{...}" />
           </folding>
         </state>
       </provider>

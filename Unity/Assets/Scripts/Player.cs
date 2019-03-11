@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace DefaultNamespace
 {
@@ -6,11 +7,13 @@ namespace DefaultNamespace
     {
         private Queue<Cards> deck;
         private Queue<Cards> winnings;
+        private int playerNumber; 
 
-        public Player(Queue<Cards> deck)
+        public Player(Queue<Cards> deck, int playerNumber)
         {
             this.deck = deck;
-            this.winnings = new Queue<Cards>();
+            winnings = new Queue<Cards>();
+            this.playerNumber = playerNumber; 
         }
         public Cards Peek()
         {
@@ -42,6 +45,11 @@ namespace DefaultNamespace
             return deck; 
         }
 
+        public int getPlayerNumber()
+        {
+            return playerNumber; 
+        }
+
         public void EnqueueWinnings(Cards c)
         {
             winnings.Enqueue(c);
@@ -51,5 +59,6 @@ namespace DefaultNamespace
         {
             return winnings; 
         }
+
     }
 }
