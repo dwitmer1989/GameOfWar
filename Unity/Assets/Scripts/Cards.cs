@@ -8,6 +8,7 @@ namespace DefaultNamespace
         private string suit;  
         private int power; // 2=2, 3=3...10=10, jack=11...ace=14
 
+        //constructor
         public Cards(string suit, int power)
         {
             this.suit = suit; 
@@ -83,6 +84,8 @@ namespace DefaultNamespace
 
             return deck; 
         }
+        
+        //splits a given deck, given the amount of players to split it into
         public static Queue<Cards>[] SplitDeck(int playerCount, Queue<Cards> deck)
         {
             Queue<Cards>[] players = new Queue<Cards>[playerCount];
