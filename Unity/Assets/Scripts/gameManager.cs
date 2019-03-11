@@ -11,11 +11,19 @@ public class gameManager : MonoBehaviour
     public int playerCount; //value assigned by UI 'gameManager' object
     public static bool playContinuous; //value assigned by UI 'gameManager' object
     private Queue<Cards> jackPot;
+    
     void Start() //called for each instance of the class (On UI scene with this class attached loaded)
     {
+        //for war scenario
         jackPot = new Queue<Cards>(); //for war scenario
+        
+        //initialize a standard deck of cards
         Queue<Cards> deck = Cards.InitializeStandardDeck();        
+        
+        //initialize the players for the game
         players = new Player[playerCount];
+        
+        //split the deck into the players' hands
         int index = 0; 
         foreach(Queue<Cards> playerDeck in Cards.SplitDeck(playerCount, deck)){
             players[index] = new Player(playerDeck, (index++)+1); 
